@@ -6,10 +6,83 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"></link>
         <title>일정관리</title>
+        <style type="text/css">
+            body {
+                text-align:center;
+                background-color:#f6f6f8
+            }
+            h1 {
+                color: #2f3b52;
+                font-weight: 900;
+                margin: 2.5rem 0 1.5rem
+            }
+            .inputBox {
+                background:#fff;
+                height:50px;
+                line-height:50px;
+                border-radius:5px
+            }
+            .shadow {
+                box-shadow:5px 10px 10px rgba(0,0,0,.03)
+            }
+            .addContainer {
+                float: right;
+                background:linear-gradient(90deg,#6478fb,#8763fb);
+                display:inline-block;
+                width:3rem;
+                border-radius:0 5px 5px 0
+            }
+            .addBtn {
+                color:#fff;
+                vertical-align:middle
+            }
+            .fa-plus:before {
+                content: "\f067";
+            }
+        </style>
+        <style>
+            .checkBtn {
+                line-height:45px;
+                color:#62acde;
+                margin-right:5px
+            }
+            .fa {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            .removeBtn {
+                margin-left: auto;
+                color: #de4343;
+            }
+            .fa-trash-o:before {
+                content: "\f014";
+            }
+        </style>
+        <style>
+            .clearAllContainer {
+                width:8.5rem;
+                height:50px;
+                line-height:50px;
+                background-color:#fff;
+                border-radius:5px;
+                margin:0 
+                auto
+            }
+            .clearAllBtn {
+                color:#e20303;
+                display:block
+            }
+        </style>
     </head>
     <body>
         <!-- title -->
-        <header>TODO It!</header>
+        <header>
+            <h1>TODO It!</h1>
+        </header>
         <!-- title input -->
         <div class="inputBox shadow">
             <form>
@@ -24,11 +97,31 @@
         <!-- todo list -->
         <section>
             <ul>
-                <li class="shadow">일정1</li>
-                <li class="shadow">일정2</li>
-                <li class="shadow">일정3</li>
-                <li class="shadow">일정4</li>
-                <li class="shadow">일정5</li>
+                <li class="shadow" style="user-select: auto;">
+                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    일정1
+                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                </li>
+                <li class="shadow" style="user-select: auto;">
+                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    일정2
+                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                </li>
+                <li class="shadow" style="user-select: auto;">
+                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    일정3
+                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                </li>
+                <li class="shadow" style="user-select: auto;">
+                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    일정4
+                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                </li>
+                <li class="shadow" style="user-select: auto;">
+                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    일정5
+                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                </li>
             </ul>
         </section>
         <!-- clear all button -->
