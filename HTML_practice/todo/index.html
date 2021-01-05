@@ -14,37 +14,53 @@
             h1 {
                 color: #2f3b52;
                 font-weight: 900;
-                margin: 2.5rem 0 1.5rem
+                margin: 2.5rem 0 1.5rem;
             }
             .inputBox {
-                background:#fff;
-                height:50px;
-                line-height:50px;
-                border-radius:5px
+                background: #fff;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 5px;
             }
             .shadow {
-                box-shadow:5px 10px 10px rgba(0,0,0,.03)
+                box-shadow: 5px 10px 10px rgba(0,0,0,.03);
             }
             .addContainer {
                 float: right;
-                background:linear-gradient(90deg,#6478fb,#8763fb);
-                display:inline-block;
-                width:3rem;
-                border-radius:0 5px 5px 0
+                background: linear-gradient(90deg,#6478fb,#8763fb);
+                display: inline-block;
+                width: 3rem;
+                border-radius: 0 5px 5px 0;
             }
             .addBtn {
-                color:#fff;
-                vertical-align:middle
+                color: #fff;
+                vertical-align: middle;
             }
             .fa-plus:before {
                 content: "\f067";
             }
         </style>
         <style>
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                margin-top: 0;
+                text-align: left;
+            }
+            li {
+                display: flex;
+                min-height: 50px;
+                height: 50px;
+                line-height: 50px;
+                margin: .5rem 0;
+                padding: 0 .9rem;
+                background: #fff;
+                border-radius: 5px;
+            }
             .checkBtn {
-                line-height:45px;
-                color:#62acde;
-                margin-right:5px
+                line-height: 45px;
+                color: #62acde;
+                margin-right: 5px;
             }
             .fa {
                 display: inline-block;
@@ -64,17 +80,16 @@
         </style>
         <style>
             .clearAllContainer {
-                width:8.5rem;
-                height:50px;
-                line-height:50px;
-                background-color:#fff;
-                border-radius:5px;
-                margin:0 
-                auto
+                width: 8.5rem;
+                height: 50px;
+                line-height: 50px;
+                background-color: #fff;
+                border-radius: 5px;
+                margin: 0 auto;
             }
             .clearAllBtn {
-                color:#e20303;
-                display:block
+                color: #e20303;
+                display: block;
             }
         </style>
     </head>
@@ -89,7 +104,6 @@
                 <input type="text" placeholder="일정을 입력하세요"/>
                 <span class="addContainer">
                     <i aria-hidden="true" class="addBtn fa fa-plus">
-                        ::before
                     </i>
                 </span>
             </form>
@@ -98,29 +112,46 @@
         <section>
             <ul>
                 <li class="shadow" style="user-select: auto;">
-                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    <i aria-hidden="true" class="checkBtn fa fa-check"></i>
                     일정1
-                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                    <span type="button" class="removeBtn">
+                        <i aria-hidden="true" class="fa fa-trash-o"></i>
+                    </span>
                 </li>
                 <li class="shadow" style="user-select: auto;">
-                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    <i aria-hidden="true" class="checkBtn fa fa-check"></i>
                     일정2
-                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                    <span type="button" class="removeBtn">
+                        <i aria-hidden="true" class="fa fa-trash-o"></i>
+                    </span>
                 </li>
                 <li class="shadow" style="user-select: auto;">
-                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    <i aria-hidden="true" class="checkBtn fa fa-check"></i>
                     일정3
-                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                    <span type="button" class="removeBtn">
+                        <i aria-hidden="true" class="fa fa-trash-o"></i>
+                    </span>
                 </li>
                 <li class="shadow" style="user-select: auto;">
-                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    <i aria-hidden="true" class="checkBtn fa fa-check"></i>
                     일정4
-                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                    <span type="button" class="removeBtn">
+                        <i aria-hidden="true" class="fa fa-trash-o"></i>
+                    </span>
                 </li>
                 <li class="shadow" style="user-select: auto;">
-                    <i aria-hidden="true" class="checkBtn fa fa-check" style="user-select: auto;"></i>
+                    <i aria-hidden="true" class="checkBtn fa fa-check"></i>
                     일정5
-                    <i aria-hidden="true" class="fa fa-trash-o" style="user-select: auto;"></i>
+                    <span type="button" class="removeBtn">
+                        <i aria-hidden="true" class="fa fa-trash-o"></i>
+                    </span>
+                </li>
+                <li class="shadow" style="user-select: auto;">
+                    <i aria-hidden="true" class="checkBtn fa fa-check"></i>
+                    일정6
+                    <span type="button" class="removeBtn">
+                        <i aria-hidden="true" class="fa fa-trash-o"></i>
+                    </span>
                 </li>
             </ul>
         </section>
