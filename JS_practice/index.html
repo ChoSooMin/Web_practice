@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            console.log("Hello JavaScript!"); // 웹에서 확인, console에서 확인하면 출력된다. (검사 -> console)
-        </script> 
+        <!-- script에 async 사용하면 비동기 처리 -->
+        <script async>
+            console.log("Header1 Hello JavaScript!"); // 웹에서 확인, console에서 확인하면 출력된다. (검사 -> console)
+        </script>
+        <script async>
+            console.log("Header2 Hello JavaScript!"); // 웹에서 확인, console에서 확인하면 출력된다. (검사 -> console)
+        </script>
+        <script async>
+            console.log("Header3 Hello JavaScript!"); // 웹에서 확인, console에서 확인하면 출력된다. (검사 -> console)
+        </script>
     </head>
     <body>
-
+        <h1>HTML Hello JavaScript</h1>
+        <script>
+            console.log("Body Hello JavaScript");
+        </script>
+        <h2>script</h2> 
     </body>
 </html>
