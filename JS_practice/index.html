@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- script에 async 사용하면 비동기 처리(실행 순서는 보장이 안된다.) -->
-        <script async>
+        <!-- async 대신 defer를 사용할 수도 있다. HTML 파싱 먼저 하고, JS를 비동기로 처리한다. -->
+        <script defer>
             console.log("Header1 Hello JavaScript!"); // 웹에서 확인, console에서 확인하면 출력된다. (검사 -> console)
         </script>
-        <script async>
+        <script defer>
             console.log("Header2 Hello JavaScript!"); // 웹에서 확인, console에서 확인하면 출력된다. (검사 -> console)
         </script>
-        <script async>
+        <script defer>
             console.log("Header3 Hello JavaScript!"); // 웹에서 확인, console에서 확인하면 출력된다. (검사 -> console)
         </script>
     </head>
