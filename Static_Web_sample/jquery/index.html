@@ -1,0 +1,31 @@
+<!-- https://learn.jquery.com/ 참고 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <h1>jQuery Sample</h1>
+        <a href="http://jquery.com">jQuery</a>
+        <button id="alertBtn">Alert!</button>
+        <!-- script 부분 -->
+        <script>
+            // 보통 파싱이 되고 작동한다.
+            $( document ).ready(function() {
+                // alert("jquery start");
+                $("a").click(function(event) {
+                    alert("Thie link will no longer take you to jquery.com");
+                    event.preventDefault(); // a에 있는 원래의 기능을 막는다. (alert창만 띄우고 원래의 기능을 막음)
+                });
+
+                // id를 사용하려면 앞에 #를 꼭 붙여줘야 한다.
+                // id가 alertBtn인 부분에 click이라는 이벤트의 핸들러를 등록해준다.
+                $("#alertBtn").on("click", function() {
+                    alert("Button Clicked!");
+                });
+            });
+        </script>
+    </body>
+</html>
