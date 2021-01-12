@@ -1,3 +1,5 @@
+import os.path # 시스템에 있는 파일의 위치에 접근할 때는 os.path 모듈을 사용한다
+
 # 수강생 관리 시스템
 students = [] # global variable
 
@@ -60,7 +62,34 @@ def menu_display() :
 def message_display(message) :
     print(message)
 
+# 프로그램 종료시 list students "students.dat" 파일 저장
+def save_list() :
+    save_file = open("students.dat", "w") # 기존의 데이터는 w 옵션으로 overload?
 
+    for index, student in enumerate(students) :
+        save_file.write("{0}번째 | {1}, {2}, {3}, {4}\n".format(index, student["id"], student["name"], student["age"], student["major"]))
+
+    save_file.close()
+
+# 프로그램 시작시 "students.dat" 파일이 존재하고 정보가 있는 경우 list students 초기화
+def init_data_load() :
+    fileExist = os.path.isfile("students.dat")
+
+    if fileExist :
+        read_file = open("students.dat", "r")
+        
+        while True :
+            data = read_file.readline()
+
+            if len(data.split("|")) == 2 : # 문자열을 "|"를 기준으로 자른다
+                student = data.split("|")[1].strip("\n").split(",") # 데이터를 "," 기준으로 자른다
+                students.append({"id": student[0].strip(), "name": student[1].strip(), "age": int(student[2].strip()), "major": student[3].strip()})
+            
+            if not data : break
+        read_file.close()
+
+
+init_data_load() # list students를 초기화하고 시작
 while True:
     menu_display()
 
@@ -102,7 +131,8 @@ while True:
         message_display(remove(id))
 
     elif menu == "0" :
-        print("수강생 관리 프로그램을 종료합니다")
+        message_display("수강생 관리 프로그램을 종료합니다")
+        save_list()
         break
     else:
         print("\n1, 2, 3, 4, 0 번 중 선택하세요")
