@@ -28,7 +28,7 @@ class Student(Person) :
         print("전공: {0}".format(self.major))
     
     # Class method
-    def classMethod(self) : 
+    def classMethod(self) : # 클래스 메소드는 
         pass
 
 class Teacher(Person) :
