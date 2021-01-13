@@ -26,6 +26,10 @@ class Student(Person) :
     def info(self) : 
         super().info()
         print("전공: {0}".format(self.major))
+    
+    # Class method
+    def classMethod(self) : 
+        pass
 
 class Teacher(Person) :
     def __init__(self, id, name, subject) :
