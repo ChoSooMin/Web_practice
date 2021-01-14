@@ -1,12 +1,12 @@
 from controller.todo_controller import TodoController
-from view.view import menu_dispay, menu_select, message_display, input_display, update_display,delete_display
+from view.view import menu_display, menu_select, message_display, input_display, update_display, delete_display
 
 controller = TodoController()
 
 controller.file_read()
 
 while True :
-    menu_dispay()
+    menu_display()
 
     menu = menu_select()
 
@@ -29,7 +29,7 @@ while True :
         controller.getAllTodos()
 
     elif menu == "0" :
-        message_display("TODO 프로그램을 종료합니다.")
+        message_display("TODO 프로그램을 종료합니다")
         controller.file_write()
         break
 

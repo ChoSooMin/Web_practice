@@ -1,5 +1,5 @@
 class Todo:
-    def __init(self, id, title) :
+    def __init__(self, id, title) :
         self.id = id
         self.title = title
 

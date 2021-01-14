@@ -1,5 +1,5 @@
-from dao.file_dao import file_read, file_write # 파일에서 데이터를 읽어오고, 저장하기 위해
-from exception.idnotfound_exception import IDNotFoundException
+from dao.todo_file import file_read, file_write # 파일에서 데이터를 읽어오고, 저장하기 위해
+from exception.exception import IDNotFoundException
 
 class TodoService :
 
@@ -7,7 +7,7 @@ class TodoService :
 
     # todo 존재여부
     def is_exist(self, id) :
-        for index, student in enumerate(TodoService.todos) :
+        for index, todo in enumerate(TodoService.todos) :
             if todo.id == id :
                 return index
 
@@ -55,7 +55,7 @@ class TodoService :
 
     # todo 전체 삭제
     def removeAll(self) :
-        todos.clear()
+        TodoService.todos.clear()
         return "todo를 모두 삭제했습니다"
 
     def file_read(self) : # 프로그램 시작시 파일에서 데이터를 읽어온다
