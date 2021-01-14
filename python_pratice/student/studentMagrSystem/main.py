@@ -7,7 +7,7 @@ controller.file_read()
 while True:
     menu_display()
 
-    menu_select() # 메뉴를 선택해주세요
+    menu = menu_select() # 메뉴를 선택해주세요
 
     if menu == "1" :
         student = input_display()
