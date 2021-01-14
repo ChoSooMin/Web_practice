@@ -29,4 +29,5 @@ while True:
         controller.file_write()
         break
     else:
-        print("\n1, 2, 3, 4, 0 번 중 선택하세요")
+        print("")
+        message_display("1, 2, 3, 4, 0 번 중 선택하세요")

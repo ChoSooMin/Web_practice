@@ -42,8 +42,9 @@ def input_display() :
 def update_display() :
     id = input("수정할 수강생 번호 : ")
     major = input("수정할 전공 : ")
+    return (id, major)
 
 # delete input display
 def delete_display() :
     id = input("삭제할 수강생 번호 : ")
-    return int(id)
+    return id
