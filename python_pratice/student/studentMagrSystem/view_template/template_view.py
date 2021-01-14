@@ -1,5 +1,4 @@
-# from student_example.studentMagrSystem.entity.student import Student
-
+from entity.student import Student
 
 # menu display
 def menu_display() :
@@ -9,6 +8,11 @@ def menu_display() :
     print("3. 수강생 정보 수정")
     print("4. 수강생 정보 삭제")
     print("0. 종료")
+
+# menu select display
+def menu_select() :
+    menu = input("메뉴를 선택하세요 : ")
+    return  menu
 
 # message display
 def message_display(message) :
@@ -31,4 +35,15 @@ def input_display() :
         age = input("나이: ")
     major = input("전공: ")
 
-    return Student(id, name, age, major)
+    return Student(id, name, int(age), major)
+
+
+# update input display
+def update_display() :
+    id = input("수정할 수강생 번호 : ")
+    major = input("수정할 전공 : ")
+
+# delete input display
+def delete_display() :
+    id = input("삭제할 수강생 번호 : ")
+    return int(id)
