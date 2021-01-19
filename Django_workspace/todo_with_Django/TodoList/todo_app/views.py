@@ -23,7 +23,7 @@ def createTodo(request) :
     # 아래 두 문장을 TodoForm을 사용해서 코드 라인을 줄일 수 있다
     # todoContent = request.POST['content'] # dictionary 형태로 넘어온다. key: value
     # new_todo = Todo(content= todoContent) # Todo Model 생성
-    new_todo = TodoForm(request.POST)
+    new_todo = TodoForm(request.POST) # TodoForm 사용
     new_todo.save() # DB 모델의 저장 메소드
     return HttpResponseRedirect(reverse('index')) # 화면 이동할 필요 없이 index이름을 가진 곳으로 리다이렉트하라
 
