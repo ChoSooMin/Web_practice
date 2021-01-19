@@ -6,7 +6,7 @@
         <form action="./createTodo/" method="POST">{% csrf_token %}
             <!-- template에서 %로 감싸진 애는 파이썬 코드가 들어간다 -->
             <div class="input-group">
-                <input id="todoContent" name="todoContent" type="text" class="form-control" placeholder="메모할 내용을 적어주세요">
+                <input id="content" name="content" type="text" class="form-control" placeholder="메모할 내용을 적어주세요">
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="submit">메모하기!</button>
                 </span>

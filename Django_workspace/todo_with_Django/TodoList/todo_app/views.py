@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import Todo
+from .forms import TodoForm
 
 # 이 파일은 MVC 패턴의 controller 역할을 한다
 # request로부터 parameter가 넘어온다 (값을 받아서 valid Check 등 다양한 일을 할 수 있음)
@@ -19,8 +20,10 @@ def index(request) : # index에 아무런 요청이 들어오지 않았을 때
 # todo_app/createTodo
 def createTodo(request) :
     # todoContent로 들어오는 데이터를 처리해서 DB에 넣어라
-    todoContent = request.POST['todoContent'] # dictionary 형태로 넘어온다. key: value
-    new_todo = Todo(content= todoContent) # Todo Model 생성
+    # 아래 두 문장을 TodoForm을 사용해서 코드 라인을 줄일 수 있다
+    # todoContent = request.POST['content'] # dictionary 형태로 넘어온다. key: value
+    # new_todo = Todo(content= todoContent) # Todo Model 생성
+    new_todo = TodoForm(request.POST)
     new_todo.save() # DB 모델의 저장 메소드
     return HttpResponseRedirect(reverse('index')) # 화면 이동할 필요 없이 index이름을 가진 곳으로 리다이렉트하라
 
